@@ -4,7 +4,20 @@ spring:
       username: root
       password: root
       driver-class-name: com.mysql.jdbc.Driver
-
+      dbcp2:
+        initial-size: 1
+        min-idle: 1
+        max-idle: 20
+    jpa:
+        database: mysql
+        show-sql: true
+        hibernate:
+          ddl-auto: update
+          naming:
+            strategy: org.hibernate.cfg.DefaultComponentSafeNamingStrategy
+        properties:
+           hibernate:
+              dialect: org.hibernate.dialect.MySQL5Dialect
 
 redis:
   shiro:
