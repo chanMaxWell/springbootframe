@@ -20,18 +20,26 @@ spring:
               dialect: org.hibernate.dialect.MySQL5Dialect
 
 
-redis:
-  shiro:
+  redis:
     host: 127.0.0.1
     post: 6379
-    timeout: 0
-    password:
+    timeout: 2000
+    database: 1
 
 # 集群
 # redis:
 #      cluster:
 #        nodes:
-#        max-redirects:
+#        timeout : 2000
+#        maxIdle : 150
+#        minEvictableIdleTimeMillis : 864000000
+#        minIdle : 50
+#        numTestsPerEvictionRun : 10
+#        softMinEvictableIdleTimeMillis : 10
+#        testOnBorrow : false
+#        testOnReturn : false
+#        testWhileIdle : false
+#        timeBetweenEvictionRunsMillis : 300000
 mybatis:
   config-location: classpath:mapper/*.xml
 
