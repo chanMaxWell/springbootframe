@@ -19,12 +19,19 @@ spring:
            hibernate:
               dialect: org.hibernate.dialect.MySQL5Dialect
 
+
 redis:
   shiro:
     host: 127.0.0.1
     post: 6379
     timeout: 0
     password:
+
+# 集群
+# redis:
+#      cluster:
+#        nodes:
+#        max-redirects:
 mybatis:
   config-location: classpath:mapper/*.xml
 
